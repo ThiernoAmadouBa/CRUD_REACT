@@ -39,9 +39,9 @@ const App = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 p-6">
-      <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-extrabold mb-6 text-center text-purple-700">
+    <div className="min-h-screen bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 p-4 sm:p-6">
+      <div className="max-w-full sm:max-w-2xl lg:max-w-3xl mx-auto bg-white p-4 sm:p-6 rounded-lg shadow-lg">
+        <h1 className="text-2xl sm:text-3xl font-extrabold mb-4 sm:mb-6 text-center text-purple-700">
           Gestion des Utilisateurs
         </h1>
         <UserForm onCreate={handleCreate} onUpdate={handleUpdate} editingUser={editingUser} />
