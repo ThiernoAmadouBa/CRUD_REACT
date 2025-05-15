@@ -24,14 +24,14 @@ const UserForm = ({ onCreate, onUpdate, editingUser }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mb-6 space-y-4 bg-gray-50 p-4 rounded-lg shadow-md"
+      className="mb-6 space-y-6 bg-gray-50 p-6 rounded-lg shadow-md"
     >
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <input
           type="text"
           name="name"
           placeholder="Nom"
-          className="form-input"
+          className="form-input w-full"
           value={formData.name}
           onChange={handleChange}
           required
@@ -40,7 +40,7 @@ const UserForm = ({ onCreate, onUpdate, editingUser }) => {
           type="email"
           name="email"
           placeholder="Email"
-          className="form-input"
+          className="form-input w-full"
           value={formData.email}
           onChange={handleChange}
           required
@@ -49,13 +49,16 @@ const UserForm = ({ onCreate, onUpdate, editingUser }) => {
           type="text"
           name="role"
           placeholder="Rôle"
-          className="form-input"
+          className="form-input w-full"
           value={formData.role}
           onChange={handleChange}
           required
         />
       </div>
-      <button type="submit" className="btn btn-primary flex items-center gap-2">
+      <button
+        type="submit"
+        className="btn btn-primary flex items-center gap-2 w-full sm:w-auto"
+      >
         {editingUser ? <FiSave /> : <FiUserPlus />}
         {editingUser ? "Mettre à jour" : "Ajouter utilisateur"}
       </button>
