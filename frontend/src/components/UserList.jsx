@@ -4,13 +4,13 @@ import { FiEdit, FiTrash2 } from "react-icons/fi";
 const UserList = ({ users, onEdit, onDelete }) => {
   return (
     <div className="overflow-x-auto">
-      <table className="min-w-full border bg-white shadow rounded-lg text-sm sm:text-base">
+      <table className="min-w-full border bg-white shadow rounded-lg text-xs sm:text-sm">
         <thead>
           <tr className="table-header bg-gray-100">
-            <th className="p-3 text-left">Nom</th>
-            <th className="p-3 text-left">Email</th>
-            <th className="p-3 text-left">Rôle</th>
-            <th className="p-3 text-center">Actions</th>
+            <th className="p-2 sm:p-3 text-left">Nom</th>
+            <th className="p-2 sm:p-3 text-left">Email</th>
+            <th className="p-2 sm:p-3 text-left">Rôle</th>
+            <th className="p-2 sm:p-3 text-center">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -26,10 +26,10 @@ const UserList = ({ users, onEdit, onDelete }) => {
                 key={user._id}
                 className="border-t hover:bg-gray-50 transition"
               >
-                <td className="p-3">{user.name}</td>
-                <td className="p-3">{user.email}</td>
-                <td className="p-3">{user.role}</td>
-                <td className="p-3 text-center space-x-2">
+                <td className="p-2 sm:p-3">{user.name}</td>
+                <td className="p-2 sm:p-3">{user.email}</td>
+                <td className="p-2 sm:p-3">{user.role}</td>
+                <td className="p-2 sm:p-3 text-center space-x-2">
                   <button
                     onClick={() => onEdit(user)}
                     className="btn btn-primary text-xs sm:text-sm inline-flex items-center gap-1"
