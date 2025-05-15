@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded font-semibold transition duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700;
+  }
+
+  .form-input {
+    @apply border p-2 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-400;
+  }
+
+  .table-header {
+    @apply bg-gray-200 text-left font-semibold;
+  }
+}
