@@ -3,7 +3,7 @@ import axios from "axios";
 import UserForm from "./components/UserForm";
 import UserList from "./components/UserList";
 
-const API_URL = "http://localhost:5000/api/user"; // adapte l'URL pour le déploiement
+const API_URL = "https://crud-react-zm5b.onrender.com"; // adapte l'URL pour le déploiement
 
 const App = () => {
   const [users, setUsers] = useState([]);
